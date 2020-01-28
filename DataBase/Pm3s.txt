@@ -1,0 +1,5 @@
+Energy [eV]	Cross Section	Asymmetry Parameter
+1486.6	0.07087	2
+1490.0	0.06923	2
+1495.0	0.06809	2
+1500.0	0.06795	2
