@@ -8,7 +8,7 @@ def differential_cross_section_equation():
     st.header('Differential Cross Section Calculation')
 
     st.markdown('''
-    Differential cross section are calculated using the below equation. Cross section and asymmetry parameters have been acquired from: https://vuo.elettra.eu/services/elements/WebElements.html
+    Differential cross section are calculated using the below equation. $^{\\text{1}}$ Cross section and asymmetry parameters have been acquired from: $^{\\text{3-5}}$ https://vuo.elettra.eu/services/elements/WebElements.html
     ''')
 
     st.latex(
@@ -38,7 +38,7 @@ def x_ray_attenuation_length_equation():
     st.header('Effective Attenuation Length Calculation')
 
     st.markdown("""
-        Effective attenuation lengths are calculated using the below equation
+        Effective attenuation lengths are calculated using the below equation: $^{2}$
     """)
 
     st.latex(
@@ -62,7 +62,7 @@ def x_ray_attenuation_length_equation():
 
     st.markdown(' ')
     st.markdown(' ')
-    st.markdown("The lattice parameter can be calculated using the following equation")
+    st.markdown("The lattice parameter can be calculated using the following equation: $^{2}$")
 
     st.latex(
         "a = 10^{8} \\left(\\frac{\\mu}{\\rho N_{A}}\\right)^{1/3}"
@@ -92,9 +92,29 @@ def info_section():
     st.title('About the App')
 
     st.markdown("""
-        This web application is being proposed as a tool to assist X-ray photoelectron spectroscopy (XPS) users in the analysis of their spectra.
 
-        The intent of this tool is to make XPS related information easier to access, and to reduce the busy work required to calculate important parameters such as the differential cross section and the effective attenuation length in a material.
+        **Author: ** Derek Dardzinski  
+        **Contact: ** dardzinski.derek@gmail.com
+
+
+        This web application is a tool to assist X-ray photoelectron spectroscopy (XPS) users in the analysis of their spectra.
+
+        The intent of this tool is to make XPS related information easier to access, and to reduce the work required to calculate important parameters such as the differential cross section and the effective attenuation length in a material.
+
+        This application has been created in Python using [Streamlit](https://www.streamlit.io/) and deloyed through [Heroku](https://www.heroku.com/apps). All code is open source and can be found on [GitHub](https://github.com/DerekDardzinski/xps_analysis).
+
+        ### References
+
+        [1] Bertrand, Alain, et al. “Atomic Calculation of Photoionization Cross-Sections and Asymmetry Parameters.” WebCrossSections, vuo.elettra.eu/services/elements/WebElements.html.
+
+        [2] Cumpson, Peter J., and Martin P. Seah. "Elastic scattering corrections in AES and XPS. II. Estimating attenuation lengths and conditions required for their valid use in overlayer/substrate experiments." Surface and Interface Analysis: An International Journal devoted to the development and application of techniques for the analysis of surfaces, interfaces and thin films 25.6 (1997): 430-446.
+
+        [3] Fadley, C. S. "Basic concepts of X-ray photoelectron spectroscopy." Electron spectroscopy: theory, techniques and applications 2 (1978): 1-156.
+
+        [4] Yeh, J. J., and I. Lindau. "Atomic subshell photoionization cross sections and asymmetry parameters: 1⩽ Z⩽ 103." Atomic data and nuclear data tables 32.1 (1985): 1-155.
+
+        [5] Yeh, J. J. "Atomic Calculation of Photoionization Cross-Section and Asymmetry Parameters Gordon and Breach Science Publishers." Langhorne, PE (USA) (1993).
+
     """)
 
     return ''
@@ -236,7 +256,7 @@ def calculate_x_ray_attenuation_length_from_formula(chemical_formula, period_tab
 
 differential_cross_section_title = "Differential Cross Section"
 x_ray_attenuation_length_title = "Effective Attentuation Length"
-info_title = "Info"
+info_title = "About the App"
 
 option = st.sidebar.radio(
     "Select an Option", [differential_cross_section_title, x_ray_attenuation_length_title, info_title], index=0)
@@ -245,7 +265,7 @@ option = st.sidebar.radio(
 # ============= Info Page ================
 # ========================================
 
-if option == "Info":
+if option == "About the App":
     st.write(info_section())
 
 # ========================================================
@@ -293,8 +313,8 @@ if option == differential_cross_section_title:
         st.markdown(f"""
             | Variable | Value | Units |
             | :------: | :---: | :---: |
-            | Differential Cross Section | {round(differential_cross_section, 5)} | barn |
-            | Cross Section | {round(cross_section, 5)} | barn |
+            | Differential Cross Section | {round(differential_cross_section, 5)} | barns |
+            | Cross Section | {round(cross_section, 5)} | barns |
             | Asymmetry Parameter | {round(asymmetry_parameter, 5)} | - |
         """)
 
