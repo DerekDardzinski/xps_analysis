@@ -318,7 +318,8 @@ if option == x_ray_attenuation_length_title:
     if show_equation is True:
         st.write(x_ray_attenuation_length_equation())
 
-    period_table_info = xps.import_periodic_table_information(file_path='PeriodicTableData.txt')
+    period_table_info = xps.import_periodic_table_information(
+        file_path='https://raw.githubusercontent.com/DerekDardzinski/xps_analysis/master/PeriodicTableData.txt')
 
     chemical_formula = st.text_input(
         'Enter the chemical formula of the compound using whole numbers for, eg. SnO2, MoS2, AlO3',

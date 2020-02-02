@@ -17,7 +17,8 @@ def import_database_to_df(core_level: str) -> pd.DataFrame:
     """
 
     # DataBase name
-    data_base_path = 'DataBase'
+    # data_base_path = 'DataBase'
+    data_base_path = 'https://raw.githubusercontent.com/DerekDardzinski/xps_analysis/master/DataBase/'
 
     # File type
     file_type = 'txt'
