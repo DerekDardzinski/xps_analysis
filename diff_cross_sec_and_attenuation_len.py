@@ -77,11 +77,11 @@ def x_ray_attenuation_length_equation():
     )
 
     st.latex(
-        "\\rho = \\text{ Density  [kg/m}^{3}\\text{]}]"
+        "\\rho = \\text{ Density  [kg/m}^{3}]"
     )
 
     st.latex(
-        "N_{A} = \\text{ Avagadro's number}"
+        "N_{A} = \\text{ Avogadro's number}"
     )
 
     return ''
