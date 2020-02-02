@@ -101,7 +101,7 @@ def info_section():
 
         The intent of this tool is to make XPS related information easier to access, and to reduce the work required to calculate important parameters such as the differential cross section and the effective attenuation length in a material.
 
-        This application has been created in Python using [Streamlit](https://www.streamlit.io/) and deloyed through [Heroku](https://www.heroku.com/apps). All code is open source and can be found on [GitHub](https://github.com/DerekDardzinski/xps_analysis).
+        This application has been created in Python using [Streamlit](https://www.streamlit.io/) and deployed through [Heroku](https://www.heroku.com/apps). All code is open source and can be found on [GitHub](https://github.com/DerekDardzinski/xps_analysis).
 
         ### References
 
@@ -256,7 +256,7 @@ def calculate_x_ray_attenuation_length_from_formula(chemical_formula, period_tab
 
 differential_cross_section_title = "Differential Cross Section"
 x_ray_attenuation_length_title = "Effective Attentuation Length"
-info_title = "About the App"
+info_title = "About the App / References"
 
 option = st.sidebar.radio(
     "Select an Option", [differential_cross_section_title, x_ray_attenuation_length_title, info_title], index=0)
@@ -265,7 +265,7 @@ option = st.sidebar.radio(
 # ============= Info Page ================
 # ========================================
 
-if option == "About the App":
+if option == info_title:
     st.write(info_section())
 
 # ========================================================
