@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit xpsanalysis.py
+web: sh setup.sh && streamlit xps_analysis.py
