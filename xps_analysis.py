@@ -276,7 +276,7 @@ if option == differential_cross_section_title:
 
     st.title('Differential Photoionization Cross Section Calculator')
 
-    show_differential_cross_section_equation = st.checkbox('Show Equation')
+    show_differential_cross_section_equation = st.checkbox('Show Equation', value=True)
 
     if show_differential_cross_section_equation is True:
         st.write(differential_cross_section_equation())
@@ -333,7 +333,7 @@ if option == x_ray_attenuation_length_title:
 
     st.title('Effective Attenuation Length Calculator')
 
-    show_equation = st.checkbox('Show Equations')
+    show_equation = st.checkbox('Show Equations', value=True)
 
     if show_equation is True:
         st.write(x_ray_attenuation_length_equation())
